@@ -61,9 +61,9 @@ body{
     .bgimg_credit{
         color: lightgrey;
         font-size: 0.7rem;
-        font-family: Helvetica, Arial, sans-serif;
+        font-family: 'Roboto', sans-serif;
         position: absolute;
-        bottom: .9%;
+        bottom: 1%;
         left: 35%;
     }
         .bgimg_credit a{
@@ -74,32 +74,39 @@ body{
     width: calc((100vw / 3 )*2);
     height: 100vh;
     background: white;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.3rem;
+    
+    
 }
     .main_text{
         background: var(--lightgreyBG);
-        padding: 120px 50px 10px;
+        padding: 120px 120px 5px 40px;
         height: 36%;
+    }
+
+    .main_text p{
+        margin-top: 20px;
     }
 
     span {
         font-style: italic;
     }
 
-    p {
-        padding-top: 20px;
-        padding-left: 10px;
+    .main_form p {     
+        margin: 0px 0px 15px 10px;
     }
 
     .main_form{
-        padding: 15px 50px;
+        padding: 15px 30px;
         font-weight: normal;
         display: flex;
         flex-direction: column;
-        height: 30%;
+        height: 29.5%;
         box-shadow: 5px 5px 5px 1px var(--inputBorder); 
+        position: relative;
+        z-index: 2;
     }
 
     form{
@@ -115,15 +122,16 @@ body{
         font-size: 0.7rem;
         padding-left: 10px;
         margin: 10px 0px -3px;
+        
     }
 
 
     input{
-        margin: 5px 10px;
+        margin: 6px 10px;
         padding: 0px 5px;
-        width: 200px;
-        height: 28px;
-        border-radius: 5px;
+        width: 220px;
+        height: 27px;
+        border-radius: 3px;
         border: 1px solid var(--inputBorder);
     }
         input:focus{
@@ -131,13 +139,17 @@ body{
             box-shadow: 5px 5px 5px var(--inputBorder); 
         }
 
-        input[type=password]:invalid{
-            outline: 0.5px solid var(--green);
+        input[type=password].error{
+            outline: 0.5px solid red;
         }
+
+        /* input[type=password].error::after{
+            content: '*passwords do not match';
+        } */
 
 
     .main_submit{
-        /* background: #f9FAFB; */
+        background: #f9FAFB;
         height: calc((100vh - 36%) - 30%);
                     /* 100vh - main_text - main_form  */
     }
@@ -145,23 +157,24 @@ body{
     button {
         background: var(--green);
         box-shadow: 5px 5px 5px var(--inputBorder); 
-        font-size: 1rem;
-        padding: 10px 40px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        padding: 12px 46px;
         color: white;
         border-radius: 5px;
         border: transparent;
-        margin: 30px 60px;
+        margin: 30px 40px;
+        
     }
 
     button:hover{
-        /* outline: 2px solid rgb(50, 65, 25); */
         background: rgb(120, 139, 90)
     }
     .main_submit p{
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: normal;
-        padding-left: 60px;
-        margin-top: -20px;
+        padding-left: 40px;
+        
     }
 
         .main_submit p a {

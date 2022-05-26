@@ -10,7 +10,6 @@
 </head>
 <body>
     
-
     <section class="bgimg">
         <div class="logoimg">
             <img class="logoimg_img" src="/odin-lined.png"  alt="The Odin Project Logo">
@@ -18,6 +17,7 @@
         </div>
         <p class="bgimg_credit">Photo by <a href="https://unsplash.com/photos/25xggax4bSA">Hailey West</a> on <a href="www.unsplash.com">Unsplash</a></p>
     </section>
+
 
     <main class="main">
 
@@ -31,11 +31,30 @@
         
         <div class="main_form">
             <p>Lets do this!</p>
-            <form> </form>
+            <form>
+                    <label for="firstName">FIRST NAME</label>
+                    <input id="firstName" type="text" placeholder="Thor">
+
+                    <label for="phNumber">PHONE NUMBER</label>
+                    <input id="phNumber"type="text">
+
+                    <label for="password">PASSWORD</label>
+                    <input id="password" type="password">
+
+                    <label for="lastName">LAST NAME</label>
+                    <input id="lastName"type="text" placeholder="Odinson">
+
+                    <label for="email">EMAIL</label>
+                    <input id="email" type="text">
+                    
+                    <label for="password_conf">CONFIRM PASSWORD</label>
+                    <input id="password_conf" type="password">
+            </form>
         </div>
 
-        <div>
-            <button></button>
+        <div class="main_submit">
+            <button type="Submit">Create Account</button>
+            <p>Already have an account? <a href="#">Log In</a></p>
         </div>
     </main>
 

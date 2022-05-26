@@ -1,6 +1,8 @@
 /* CSS for signupform index.html */
 :root{
     --lightgreyBG: #f9FAFB;
+    --inputBorder: #E5E7EB;
+    --green: #596D48;
 }
 * {
     margin: 0;
@@ -60,12 +62,9 @@ body{
         color: lightgrey;
         font-size: 0.7rem;
         font-family: Helvetica, Arial, sans-serif;
-        
         position: absolute;
         bottom: .9%;
         left: 35%;
-        
-        
     }
         .bgimg_credit a{
             color: lightgrey;
@@ -79,7 +78,6 @@ body{
     font-size: 1.2rem;
     font-weight: bold;
 }
-
     .main_text{
         background: var(--lightgreyBG);
         padding: 120px 50px 10px;
@@ -90,11 +88,85 @@ body{
         font-style: italic;
     }
 
-    .main_text p{
+    p {
         padding-top: 20px;
+        padding-left: 10px;
     }
 
     .main_form{
         padding: 15px 50px;
         font-weight: normal;
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+        box-shadow: 5px 5px 5px 1px var(--inputBorder); 
     }
+
+    form{
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height:85%;
+        width: 80%;
+        
+    }
+
+    label{
+        font-size: 0.7rem;
+        padding-left: 10px;
+        margin: 10px 0px -3px;
+    }
+
+
+    input{
+        margin: 5px 10px;
+        padding: 0px 5px;
+        width: 200px;
+        height: 28px;
+        border-radius: 5px;
+        border: 1px solid var(--inputBorder);
+    }
+        input:focus{
+            outline: 0.5px solid blue;
+            box-shadow: 5px 5px 5px var(--inputBorder); 
+        }
+
+        input[type=password]:invalid{
+            outline: 0.5px solid var(--green);
+        }
+
+
+    .main_submit{
+        /* background: #f9FAFB; */
+        height: calc((100vh - 36%) - 30%);
+                    /* 100vh - main_text - main_form  */
+    }
+
+    button {
+        background: var(--green);
+        box-shadow: 5px 5px 5px var(--inputBorder); 
+        font-size: 1rem;
+        padding: 10px 40px;
+        color: white;
+        border-radius: 5px;
+        border: transparent;
+        margin: 30px 60px;
+    }
+
+    button:hover{
+        /* outline: 2px solid rgb(50, 65, 25); */
+        background: rgb(120, 139, 90)
+    }
+    .main_submit p{
+        font-size: 0.9rem;
+        font-weight: normal;
+        padding-left: 60px;
+        margin-top: -20px;
+    }
+
+        .main_submit p a {
+            color: var(--green);
+            font-weight: bold;
+            text-decoration: none;
+
+        }

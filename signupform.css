@@ -1,0 +1,100 @@
+/* CSS for signupform index.html */
+:root{
+    --lightgreyBG: #f9FAFB;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: Norse;
+    src: url("https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf");
+}
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+body{
+    display:flex;
+   justify-content: center;
+    background-color: black;
+}
+
+.bgimg{ 
+    position: relative;
+    width: calc(100vw / 2.5);
+    height: 100vh;
+    background: black url("/leafbg.avif") no-repeat;
+    background-size: cover;
+    background-position: -55px 0px;
+}
+
+    .logoimg{
+        height: 125px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.449);
+        position: absolute;
+        top: 190px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logoimg_img{
+        height: 85%;
+    }
+
+    .logoimg_text{
+        color: white;
+        font-family: Norse, sans-serif;
+        font-size: 4.95rem;
+        padding: 5px 2px;
+        margin-top: 25px;
+    }
+
+    .bgimg_credit{
+        color: lightgrey;
+        font-size: 0.7rem;
+        font-family: Helvetica, Arial, sans-serif;
+        
+        position: absolute;
+        bottom: .9%;
+        left: 35%;
+        
+        
+    }
+        .bgimg_credit a{
+            color: lightgrey;
+        }
+
+.main {
+    width: calc((100vw / 3 )*2);
+    height: 100vh;
+    background: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+    .main_text{
+        background: var(--lightgreyBG);
+        padding: 120px 50px 10px;
+        height: 36%;
+    }
+
+    span {
+        font-style: italic;
+    }
+
+    .main_text p{
+        padding-top: 20px;
+    }
+
+    .main_form{
+        padding: 15px 50px;
+        font-weight: normal;
+    }

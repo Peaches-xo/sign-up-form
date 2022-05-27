@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
 }
 
 @font-face{
@@ -22,7 +23,7 @@ img {
 
 body{
     display:flex;
-   justify-content: center;
+    justify-content: center;
     background-color: black;
 }
 
@@ -75,18 +76,17 @@ body{
     height: 100vh;
     background: white;
     font-family: 'Roboto', sans-serif;
+    font-kerning: none;
     font-weight: 500;
     font-size: 1.3rem;
-    
-    
 }
-    .main_text{
+    .main_text{                 /* THIS IS NOT A REAL ONLINE... */
         background: var(--lightgreyBG);
         padding: 120px 120px 5px 40px;
         height: 36%;
     }
 
-    .main_text p{
+    .main_text p{               /* YOU KNOW YOU WANT TO */
         margin-top: 20px;
     }
 
@@ -94,37 +94,35 @@ body{
         font-style: italic;
     }
 
-    .main_form p {     
-        margin: 0px 0px 15px 10px;
+    .main_form p {              /* LETS DO THIS */
+        margin: 0px 0px 10px 10px;
     }
 
     .main_form{
         padding: 15px 30px;
         font-weight: normal;
-        display: flex;
-        flex-direction: column;
         height: 29.5%;
         box-shadow: 5px 5px 5px 1px var(--inputBorder); 
         position: relative;
         z-index: 2;
     }
 
-    form{
+    form ul{
+        display:flex;
+        flex-wrap: wrap;
+    }
+
+    li {
         display:flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        height:85%;
-        width: 80%;
-        
+        margin-bottom: 3px;
     }
 
     label{
         font-size: 0.7rem;
         padding-left: 10px;
         margin: 10px 0px -3px;
-        
     }
-
 
     input{
         margin: 6px 10px;
@@ -134,12 +132,17 @@ body{
         border-radius: 3px;
         border: 1px solid var(--inputBorder);
     }
+
+    input:nth-of-type(odd){
+        margin-right: 50px;
+    }
+
         input:focus{
-            outline: 0.5px solid blue;
+            outline: 0.5px solid rgb(37, 137, 237);
             box-shadow: 5px 5px 5px var(--inputBorder); 
         }
 
-        input[type=password].error{
+        input.error{
             outline: 0.5px solid red;
         }
 

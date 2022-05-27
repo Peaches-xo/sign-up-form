@@ -33,31 +33,40 @@
             <p>You <span>know</span> you want to.</p>
         </div>
         
-        <div class="main_form">
+        <div id="form" class="main_form">
             <p>Lets do this!</p>
-            <form>
-                    <label for="firstName">FIRST NAME</label>
-                    <input id="firstName" type="text" placeholder="Thor">
-
-                    <label for="email">EMAIL</label>
-                    <input id="email"  type="text">
-
-                    <label for="password">PASSWORD</label>
-                    <input id="password" class="error" type="password">
-
-                    <label for="lastName">LAST NAME</label>
-                    <input id="lastName" type="text" placeholder="Odinson">
-
-                    <label for="phNumber">PHONE NUMBER</label>
-                    <input id="phNumber"type="text">
-                    
-                    <label for="password_conf">CONFIRM PASSWORD</label>
-                    <input id="password_conf" class="error" type="password">
+            <form action="" method="post">
+                <ul>
+                    <li>
+                        <label for="firstName">FIRST NAME</label>
+                        <input id="firstName" name="firstName" type="text" placeholder="Thor">
+                    </li>
+                    <li>
+                        <label for="lastName">LAST NAME</label>
+                        <input id="lastName" name="lastName" type="text" placeholder="Odinson">
+                    </li>
+                    <li>
+                        <label for="email">EMAIL</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com">
+                    </li>
+                    <li>
+                        <label for="phNumber">PHONE NUMBER</label>
+                        <input id="phNumber" name="phNumber" type="number">
+                    </li>
+                    <li>
+                        <label for="password">PASSWORD</label>
+                        <input id="password" name="password" class="error" type="password">
+                    </li>
+                    <li>
+                       <label for="password_conf">CONFIRM PASSWORD</label>
+                      <input id="password_conf" name="password_conf" class="error" type="password">
+                    </li>
+                </ul>
             </form>
         </div>
 
         <div class="main_submit">
-            <button type="Submit">Create Account</button>
+            <button type="Submit" form="form">Create Account</button>
             <p>Already have an account? <a href="#">Log In</a></p>
         </div>
     </main>

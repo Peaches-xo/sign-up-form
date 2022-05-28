@@ -19,6 +19,7 @@
             <p   class="logoimg_text"> ODIN </p> 
         </div>
         <p class="bgimg_credit">Photo by <a href="https://unsplash.com/photos/25xggax4bSA">Hailey West</a> on <a href="www.unsplash.com">Unsplash</a></p>
+        <p class="bgimg_credit">Tick icon by<a href="https://www.flaticon.com/free-icons/tick" title="tick icons"> Octopocto</a> on <a href="https://www.flaticon.com">Flaticon</a></p>
     </section>
 
 
@@ -33,9 +34,9 @@
             <p>You <span>know</span> you want to.</p>
         </div>
         
-        <div id="form" class="main_form">
+        <div class="main_form">
             <p>Lets do this!</p>
-            <form action="" method="post">
+            <form id="form" action="#" method="get">
                 <ul>
                     <li>
                         <label for="firstName">FIRST NAME</label>
@@ -51,22 +52,22 @@
                     </li>
                     <li>
                         <label for="phNumber">PHONE NUMBER</label>
-                        <input id="phNumber" name="phNumber" type="number">
+                        <input id="phNumber" name="phNumber" type="text" inputmode="numeric" maxlength="20">
                     </li>
                     <li>
                         <label for="password">PASSWORD</label>
-                        <input id="password" name="password" class="error" type="password">
+                        <input id="password" name="password" type="password">
                     </li>
                     <li>
                        <label for="password_conf">CONFIRM PASSWORD</label>
-                      <input id="password_conf" name="password_conf" class="error" type="password">
+                      <input id="password_conf" name="password_conf"  type="password">
                     </li>
                 </ul>
             </form>
         </div>
 
         <div class="main_submit">
-            <button type="Submit" form="form">Create Account</button>
+            <button type="Submit" value= "Create Account" form="form">Create Account</button>
             <p>Already have an account? <a href="#">Log In</a></p>
         </div>
     </main>

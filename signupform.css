@@ -3,6 +3,7 @@
     --lightgreyBG: #f9FAFB;
     --inputBorder: #E5E7EB;
     --green: #596D48;
+    --hoverGreen: rgb(120, 139, 90);
 }
 * {
     margin: 0;
@@ -59,16 +60,21 @@ body{
         margin-top: 25px;
     }
 
-    .bgimg_credit{
+    .bgimg_credit{                  /*  CREDITS      */
         color: lightgrey;
         font-size: 0.7rem;
         font-family: 'Roboto', sans-serif;
-        position: absolute;
-        bottom: 1%;
+         position: absolute;
+        bottom: 3%;
         left: 35%;
     }
-        .bgimg_credit a{
+         .bgimg_credit a{               
             color: lightgrey;
+        }
+
+        .bgimg p:last-of-type {
+            bottom: 1%;
+            
         }
 
 .main {
@@ -137,13 +143,38 @@ body{
         margin-right: 50px;
     }
 
-        input:focus{
-            outline: 0.5px solid rgb(37, 137, 237);
-            box-shadow: 5px 5px 5px var(--inputBorder); 
+    input:hover, 
+    input:-webkit-autofill:hover {
+        box-shadow: 5px 5px 5px var(--inputBorder); 
+    }
+
+        input:valid{
+            outline: 1px solid rgba(123, 194, 8, 0.62);
+        }
+        input:valid::after{
+            content:"/check-mark.png";
+            background: rgba(218, 247, 218, 0.797) url("/check-mark.png");
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 195px;
+        }
+
+        input:invalid{
+            outline: 0.5px solid red;
+
+            background: url("/cancel.png");
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 195px;
         }
 
         input.error{
             outline: 0.5px solid red;
+        }
+        input:focus, 
+        input:-webkit-autofill:focus {
+            outline: 0.5px solid rgb(37, 137, 237);
+            box-shadow: 5px 5px 5px var(--inputBorder); 
         }
 
         /* input[type=password].error::after{
@@ -171,18 +202,22 @@ body{
     }
 
     button:hover{
-        background: rgb(120, 139, 90)
+        background: var(--hoverGreen);
     }
     .main_submit p{
         font-size: 1rem;
         font-weight: normal;
         padding-left: 40px;
-        
     }
 
         .main_submit p a {
             color: var(--green);
             font-weight: bold;
             text-decoration: none;
-
         }
+
+        .main_submit p a:hover{
+            color: var(--hoverGreen);
+        }
+
+     

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
     <link rel="stylesheet" type="text/css" href="/signupform.css">
+    <script src="/signupform.js" defer></script>
 <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,26 +42,32 @@
                     <li>
                         <label for="firstName">FIRST NAME</label>
                         <input id="firstName" name="firstName" type="text" placeholder="Thor">
+                        <span class="validation"></span>
                     </li>
                     <li>
                         <label for="lastName">LAST NAME</label>
                         <input id="lastName" name="lastName" type="text" placeholder="Odinson">
+                        <span class="validation"></span>
                     </li>
                     <li>
                         <label for="email">EMAIL</label>
                         <input id="email" name="email" type="email" placeholder="you@example.com">
+                        <span class="validation"></span>
                     </li>
                     <li>
                         <label for="phNumber">PHONE NUMBER</label>
                         <input id="phNumber" name="phNumber" type="text" inputmode="numeric" maxlength="20">
+                        <span class="validation"></span>
                     </li>
                     <li>
                         <label for="password">PASSWORD</label>
-                        <input id="password" name="password" type="password">
+                        <input id="password" name="password" class="error" type="password">
+                        <span class="validation">* Passwords do not match</span>
                     </li>
                     <li>
                        <label for="password_conf">CONFIRM PASSWORD</label>
-                      <input id="password_conf" name="password_conf"  type="password">
+                      <input id="password_conf" name="password_conf" class="error" type="password">
+                      <span class="validation"></span>
                     </li>
                 </ul>
             </form>

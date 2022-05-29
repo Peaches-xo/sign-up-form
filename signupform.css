@@ -17,11 +17,6 @@
     src: url("https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf");
 }
 
-img { 
-    max-width: 100%; 
-    height: auto; 
-}
-
 body{
     display:flex;
     justify-content: center;
@@ -74,7 +69,6 @@ body{
 
         .bgimg p:last-of-type {
             bottom: 1%;
-            
         }
 
 .main {
@@ -149,37 +143,42 @@ body{
     }
 
         input:valid{
-            outline: 1px solid rgba(123, 194, 8, 0.62);
-        }
-        input:valid::after{
-            content:"/check-mark.png";
-            background: rgba(218, 247, 218, 0.797) url("/check-mark.png");
+            /* outline: 1px solid rgba(123, 194, 8, 0.62); */
+        
+             /* background: url("/check-mark.png");
             background-size: 20px;
             background-repeat: no-repeat;
-            background-position: 195px;
+            background-position: 195px; */
         }
 
         input:invalid{
             outline: 0.5px solid red;
 
-            background: url("/cancel.png");
+            /* background: url("/cancel.png");
             background-size: 20px;
             background-repeat: no-repeat;
-            background-position: 195px;
+            background-position: 195px; */
         }
 
         input.error{
             outline: 0.5px solid red;
         }
+
         input:focus, 
         input:-webkit-autofill:focus {
             outline: 0.5px solid rgb(37, 137, 237);
             box-shadow: 5px 5px 5px var(--inputBorder); 
         }
 
-        /* input[type=password].error::after{
-            content: '*passwords do not match';
-        } */
+      span.validation{
+        font-family: 'Roboto', sans-serif;
+          color: rgb(170, 7, 7);
+          font: normal 0.7rem Roboto;
+          margin-left: 10px;
+          margin-top: -5px;
+         
+         
+      }
 
 
     .main_submit{

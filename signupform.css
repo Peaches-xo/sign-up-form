@@ -21,6 +21,7 @@ body{
     display:flex;
     justify-content: center;
     background-color: black;
+    height: 100%;
 }
 
 .bgimg{ 
@@ -59,9 +60,9 @@ body{
         color: lightgrey;
         font-size: 0.7rem;
         font-family: 'Roboto', sans-serif;
-         position: absolute;
-        bottom: 3%;
-        left: 35%;
+        position: absolute;
+        bottom: 4%;
+        left: 20%;
     }
          .bgimg_credit a{               
             color: lightgrey;
@@ -70,6 +71,9 @@ body{
         .bgimg p:last-of-type {
             bottom: 1%;
         }
+/* ----------------------------------------------- */
+
+
 
 .main {
     width: calc((100vw / 3 )*2);
@@ -79,15 +83,20 @@ body{
     font-kerning: none;
     font-weight: 500;
     font-size: 1.3rem;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
 }
     .main_text{                 /* THIS IS NOT A REAL ONLINE... */
         background: var(--lightgreyBG);
-        padding: 120px 120px 5px 40px;
+        padding: 15% 15% 1% 40px;
         height: 36%;
+        height: auto;
     }
 
     .main_text p{               /* YOU KNOW YOU WANT TO */
         margin-top: 20px;
+        margin-bottom: 5%;
     }
 
     span {
@@ -101,7 +110,8 @@ body{
     .main_form{
         padding: 15px 30px;
         font-weight: normal;
-        height: 29.5%;
+        /* height: 29.5%; */
+        height: auto;
         box-shadow: 5px 5px 5px 1px var(--inputBorder); 
         position: relative;
         z-index: 2;
@@ -116,6 +126,7 @@ body{
         display:flex;
         flex-direction: column;
         margin-bottom: 3px;
+     
     }
 
     label{
@@ -128,6 +139,7 @@ body{
         margin: 6px 10px;
         padding: 0px 5px;
         width: 220px;
+
         height: 27px;
         border-radius: 3px;
         border: 1px solid var(--inputBorder);
@@ -176,14 +188,15 @@ body{
           font: normal 0.7rem Roboto;
           margin-left: 10px;
           margin-top: -5px;
-         
-         
+                 
       }
 
 
     .main_submit{
         background: #f9FAFB;
-        height: calc((100vh - 36%) - 30%);
+        height: calc((100vh - 34%) - 30%);
+ 
+        
                     /* 100vh - main_text - main_form  */
     }
 
@@ -219,4 +232,29 @@ body{
             color: var(--hoverGreen);
         }
 
+
+
+        /* -----------------MEDIA QUERIES -------------------------- */
      
+/* @media screen and (min-width: 768px) and (max-width: 1023px){
+
+
+    .main_text, .main_form, .main_submit{
+        height: auto;
+    }
+    .main_submit{
+        background: #e490e4;
+ /* Need to add in height via JS: (100vh - height of main_text - height of main_form) 
+                   
+    }
+
+    input:nth-of-type(odd){
+        margin-right: 20px;
+    }
+} */
+
+
+
+
+
+

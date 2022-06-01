@@ -28,7 +28,7 @@ body{
     position: relative;
     width: calc(100vw / 2.5);
     height: 100vh;
-    background: black url("leafbg.avif") no-repeat;
+    background: black url("leafBG.jpg") no-repeat;
     background-size: cover;
     background-position: -55px 0px;
 }
@@ -108,9 +108,9 @@ body{
     }
 
     .main_form{
-        padding: 15px 30px;
+        padding: 15px;
+        padding-left: 30px;
         font-weight: normal;
-        /* height: 29.5%; */
         height: auto;
         box-shadow: 5px 5px 5px 1px var(--inputBorder); 
         position: relative;
@@ -126,7 +126,6 @@ body{
         display:flex;
         flex-direction: column;
         margin-bottom: 3px;
-     
     }
 
     label{
@@ -139,7 +138,6 @@ body{
         margin: 6px 10px;
         padding: 0px 5px;
         width: 220px;
-
         height: 27px;
         border-radius: 3px;
         border: 1px solid var(--inputBorder);
@@ -195,8 +193,7 @@ body{
     .main_submit{
         background: #f9FAFB;
         height: calc((100vh - 34%) - 30%);
- 
-        
+
                     /* 100vh - main_text - main_form  */
     }
 
@@ -231,30 +228,5 @@ body{
         .main_submit p a:hover{
             color: var(--hoverGreen);
         }
-
-
-
-        /* -----------------MEDIA QUERIES -------------------------- */
-     
-/* @media screen and (min-width: 768px) and (max-width: 1023px){
-
-
-    .main_text, .main_form, .main_submit{
-        height: auto;
-    }
-    .main_submit{
-        background: #e490e4;
- /* Need to add in height via JS: (100vh - height of main_text - height of main_form) 
-                   
-    }
-
-    input:nth-of-type(odd){
-        margin-right: 20px;
-    }
-} */
-
-
-
-
 
 

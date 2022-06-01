@@ -28,7 +28,7 @@ body{
     position: relative;
     width: calc(100vw / 2.5);
     height: 100vh;
-    background: black url("/leafbg.avif") no-repeat;
+    background: black url("leafbg.avif") no-repeat;
     background-size: cover;
     background-position: -55px 0px;
 }

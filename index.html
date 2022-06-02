@@ -37,7 +37,7 @@
         
         <div class="main_form">
             <p>Lets do this!</p>
-            <form id="form" action="#" method="GET">
+            <form id="form" action="/#" method="GET" novalidate>
                 <ul>
                     <li>
                         <label for="firstName">FIRST NAME</label>
@@ -61,12 +61,12 @@
                     </li>
                     <li>
                         <label for="password">PASSWORD</label>
-                        <input id="password" name="password" class="error" type="password">
-                        <span class="validation">* Passwords do not match</span>
+                        <input id="password" name="password" type="password">
+                        <span class="validation"></span>
                     </li>
                     <li>
                        <label for="password_conf">CONFIRM PASSWORD</label>
-                      <input id="password_conf" name="password_conf" class="error" type="password">
+                      <input id="pwConfirm" name="pwConfirm" type="password">
                       <span class="validation"></span>
                     </li>
                 </ul>

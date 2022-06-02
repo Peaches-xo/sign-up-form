@@ -20,17 +20,19 @@
 body{
     display:flex;
     justify-content: center;
+    align-items: center;
     background-color: black;
     height: 100%;
+    height: auto;
 }
 
 .bgimg{ 
     position: relative;
-    width: calc(100vw / 2.5);
+    width: 40%;
     height: 100vh;
+    /* height: auto; */
     background: black url("leafBG.jpg") no-repeat;
     background-size: cover;
-    background-position: -55px 0px;
 }
 
     .logoimg{
@@ -73,8 +75,6 @@ body{
         }
 /* ----------------------------------------------- */
 
-
-
 .main {
     width: calc((100vw / 3 )*2);
     height: 100vh;
@@ -96,20 +96,21 @@ body{
 
     .main_text p{               /* YOU KNOW YOU WANT TO */
         margin-top: 20px;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
     }
 
     span {
         font-style: italic;
     }
 
+    /* ------------------------------------------------- */
     .main_form p {              /* LETS DO THIS */
-        margin: 0px 0px 10px 10px;
+        margin: 0px 0px 5px 10px;
     }
 
     .main_form{
-        padding: 15px;
-        padding-left: 30px;
+
+        padding: 15px 15px 30px 30px;
         font-weight: normal;
         height: auto;
         box-shadow: 5px 5px 5px 1px var(--inputBorder); 
@@ -152,26 +153,36 @@ body{
         box-shadow: 5px 5px 5px var(--inputBorder); 
     }
 
-        input:valid{
-            /* outline: 1px solid rgba(123, 194, 8, 0.62); */
-        
-             /* background: url("/check-mark.png");
-            background-size: 20px;
-            background-repeat: no-repeat;
-            background-position: 195px; */
+        input.valid
+        /* , input:valid */ {
+            outline: 1px solid rgba(123, 194, 8, 0.62);
         }
+            input.valid+span.validation
+            /* ,input:valid +span.validation  */ {
+                color: green;
+                height: 20px;
+                background: url("/check-mark.png");
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: 1px 1px;
+            }
 
-        input:invalid{
+        input.invalid{
             outline: 0.5px solid red;
 
-            /* background: url("/cancel.png");
-            background-size: 20px;
-            background-repeat: no-repeat;
-            background-position: 195px; */
         }
+            input.invalid+span.validation{
+                color: rgb(170, 7, 7);
+                height: 20px;
+                background: url("/cancel.png");
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: 1px 1px;
+
+            }
 
         input.error{
-            outline: 0.5px solid red;
+            /* outline: 0.5px solid red; */
         }
 
         input:focus, 
@@ -182,11 +193,12 @@ body{
 
       span.validation{
         font-family: 'Roboto', sans-serif;
-          color: rgb(170, 7, 7);
           font: normal 0.7rem Roboto;
           margin-left: 10px;
           margin-top: -5px;
-                 
+          width: 220px;
+          padding: 3px 0px 3px 25px;
+        
       }
 
 
